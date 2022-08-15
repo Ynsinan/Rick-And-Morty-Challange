@@ -27,7 +27,7 @@ const MainPage = (props: Props) => {
   return (
     <Flex flexDirection="column" w="80%" m="0 auto" p={2}>
       <Box marginBottom={5}>
-        <Filter />
+        {data ? <Filter data={data} /> : <p>Loading...</p>}
       </Box>
       <Box
         display="flex"

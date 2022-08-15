@@ -5,7 +5,13 @@ type Props = {};
 
 const header = (props: Props) => {
   return (
-    <Flex p={3} minWidth="max-content" gap="2" justifyContent="space-between">
+    <Flex
+      p={3}
+      minWidth="max-content"
+      gap="2"
+      justifyContent="space-between"
+      color="teal"
+    >
       <Box p="2">
         <Heading
           size="md"

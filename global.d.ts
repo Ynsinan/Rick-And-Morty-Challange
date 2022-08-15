@@ -22,6 +22,7 @@ export type CharacterTypes = {
   gender: string;
   species: string;
   status: string;
+  location: { name: string };
 };
 export interface Info {
   count: number;
