@@ -17,6 +17,7 @@ const Card = ({ characterData }: CardProps) => {
   return (
     <Center py={12}>
       <Box
+        h={["auto"]}
         role={"group"}
         p={6}
         maxW={"330px"}
@@ -87,7 +88,7 @@ const Card = ({ characterData }: CardProps) => {
           </Heading>
           <Stack direction={"row"} align={"center"}>
             <Text fontWeight={800} fontSize={"xl"}>
-              {characterData.origin.name}
+              Origin : {characterData.origin.name}
             </Text>
           </Stack>
         </Stack>

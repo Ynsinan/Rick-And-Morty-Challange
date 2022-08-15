@@ -1,4 +1,4 @@
-import { Button, Stack } from "@chakra-ui/react";
+import { Button, Stack, Text } from "@chakra-ui/react";
 import { ArrowForwardIcon, ArrowBackIcon } from "@chakra-ui/icons";
 type Props = {
   setPage: (page: number) => void;
@@ -7,7 +7,13 @@ type Props = {
 
 const Pagination = ({ setPage, page }: Props) => {
   return (
-    <Stack direction="row" spacing={4} justifyContent="flex-end">
+    <Stack
+      direction="row"
+      spacing={4}
+      justifyContent="flex-end"
+      textAlign="center"
+      verticalAlign="center"
+    >
       <Button
         leftIcon={<ArrowBackIcon />}
         colorScheme="teal"
@@ -17,6 +23,15 @@ const Pagination = ({ setPage, page }: Props) => {
       >
         Prev Page
       </Button>
+      <Text
+        fontSize="1.6rem"
+        textColor="teal"
+        fontWeight="semibold"
+        letterSpacing="-1%"
+        stroke="teal"
+      >
+        {page}
+      </Text>
       <Button
         rightIcon={<ArrowForwardIcon />}
         colorScheme="teal"

@@ -1,30 +1,12 @@
-import { useEffect, useState } from "react";
-import { dataFetch } from "src/api";
-
 import { Flex, Wrap } from "@chakra-ui/react";
 import { CharacterTypes } from "global";
 import { Card } from "..";
 
 type Props = {
-  page: number;
+  data: CharacterTypes[];
 };
 
-const Cards = ({ page }: Props) => {
-  const [data, setData] = useState<CharacterTypes[]>();
-
-  const getData = async (page: number) => {
-    try {
-      const response = await dataFetch.CharactersGET(page);
-      setData(response.results);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    getData(page);
-  }, [page]);
-
+const Cards = ({ data }: Props) => {
   return (
     <Flex w="100%">
       <Wrap spacing="30px" justify="center">
